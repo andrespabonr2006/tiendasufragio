@@ -49,59 +49,59 @@ let producto7={
 }
 
 let producto8={
-    nombre:"producto8",
-    precio:500000,
+    nombre:"gta 5",
+    precio:90000,
     estado:"Nuevo",
     foto:""
 }
 
 let producto9={
-    nombre:"producto9",
-    precio:500000,
+    nombre:"halo infinite",
+    precio:100000,
     estado:"Nuevo",
-    foto:""
+    foto:"https://firebasestorage.googleapis.com/v0/b/tiendita-27a12.appspot.com/o/halo.png?alt=media&token=6a199bb8-d60e-4841-b918-a3b5369096d1"
 }
 
 let producto10={
     nombre:"producto10",
     precio:500000,
     estado:"Nuevo",
-    foto:""
+    foto:"https://firebasestorage.googleapis.com/v0/b/tiendita-27a12.appspot.com/o/gta5.png?alt=media&token=86e35afa-4be3-43cf-a077-2b19b376cdd2"
 }
 
 let producto11={
-    nombre:"producto11",
-    precio:500000,
+    nombre:"lol",
+    precio:0,
     estado:"Nuevo",
-    foto:""
+    foto:"https://firebasestorage.googleapis.com/v0/b/tiendita-27a12.appspot.com/o/lol.png?alt=media&token=8de6d13d-fd44-4bfe-8cf5-70522fda7ab0"
 }
 
 let producto12={
-    nombre:"producto12",
-    precio:500000,
+    nombre:"los sims",
+    precio:45000,
     estado:"Nuevo",
-    foto:""
+    foto:"https://firebasestorage.googleapis.com/v0/b/tiendita-27a12.appspot.com/o/lossims.png?alt=media&token=e4482c68-d224-4f3e-8b19-832437376964"
 }
 
 let producto13={
-    nombre:"producto13",
-    precio:500000,
+    nombre:"minecraft",
+    precio:55000,
     estado:"Nuevo",
-    foto:""
+    foto:"https://firebasestorage.googleapis.com/v0/b/tiendita-27a12.appspot.com/o/minecraft.png?alt=media&token=9230f3c5-8e1d-42e6-9fa3-2ddcdd931fc0"
 }
 
 let producto14={
-    nombre:"producto14",
-    precio:500000,
+    nombre:"mario kart",
+    precio:65000,
     estado:"Nuevo",
-    foto:""
+    foto:"https://firebasestorage.googleapis.com/v0/b/tiendita-27a12.appspot.com/o/mk.png?alt=media&token=ed89f3be-7716-4660-b949-2e0ced3e28b9"
 }
 
 let producto15={
-    nombre:"producto15",
+    nombre:"the witcher 3",
     precio:500000,
     estado:"Nuevo",
-    foto:""
+    foto:"https://firebasestorage.googleapis.com/v0/b/tiendita-27a12.appspot.com/o/tw.png?alt=media&token=7b8b4b1d-4eba-44ef-bbe9-98d9982b649f"
 }
 
 //ARREGLO
@@ -124,7 +124,26 @@ let productos=Array(
 )
 
 //RECORRO EL ARREGLO
+let contenedor=document.getElementById("contenedor")
 productos.forEach(function(producto){
-    console.log(producto.nombre)
+    let foto=document.createElement("img")
+    foto.classList.add("w-100","img-fluid")
+    foto.src=producto.foto
+    let columna=document.createElement("div")
+    columna.classList.add("col")
+    let targeta=document.createElement("div")
+    targeta.classList.add("card")
+    targeta.appendChild(foto)
+    columna.appendChild(targeta)
+    contenedor.appendChild(columna)
+
+
+
+
+
+
+
+
+
 })
 
